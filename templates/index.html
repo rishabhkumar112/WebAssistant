@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Task Automator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="../static/assistant.png">
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif
+  }
+
+  hr.new5 {
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+</style>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:10px">
+    <header class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center">
+        <h1>Web Assistant</h1>
+      </div>
+      <hr class="new5">
+    </header>
+    <!-- First Grid-->
+    <!-- YouTube -->
+    <div class="w3-row-padding">
+      <div style="margin-left: 170px;" class="w3-third w3-container w3-margin-bottom">
+        <img src="/static/youtube.jpeg" style="width: 100%; height:200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b style="margin-left: 100px;">Play YouTube video</b></p>
+          <p>Enter the name of song/video you want to listen and it will open automatically in YouTube</p>
+          <form method="POST" action="/youtube" class="navbar-form navbar-right" role="search">
+            <div style="margin-top: 0px;" class="form-group input-group">
+              <input type="text" name="video_name" style="width:300px;" placeholder="Enter Video Name">
+              <span class="input-group-btn">
+                <button style="margin-left: 10px; " type="submit" class="btn btn-primary"><i
+                    class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- News -->
+      <div style="margin-left: 75px;" class="w3-third w3-container w3-margin-bottom">
+        <img src="/static/news.jpeg" style="width: 100%; height:200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b style="margin-left: 100px;">Fetch news articles</b></p>
+          <p>Enter the topic on which you want to see news articles</p>
+          <form method="POST" action="/news" class="navbar-form navbar-right" role="search">
+            <div style="margin-top: 0px;" class="form-group input-group">
+              <input type="text" name="news_topic" style="width:300px;" placeholder="Enter news topic">
+              <span class="input-group-btn">
+                <button style="margin-left: 10px; " type="submit" class="btn btn-primary"><i
+                    class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <!--Price of product-->
+      <div style="margin-left: 170px;" class="w3-third w3-container w3-margin-bottom">
+        <img src="/static/product.jpeg" style="width: 100%; height:200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b style="margin-left: 100px;">Compare Price</b></p>
+          <p>Compare the price of your favourite product on Flipkart and E-bay</p>
+          <form method="POST" action="/product" class="navbar-form navbar-right" role="search">
+            <div style="margin-top: 0px;" class="form-group input-group">
+              <input type="text" name="product_name" style="width:300px;" placeholder="Enter product name">
+              <span class="input-group-btn">
+                <button style="margin-left: 10px; " type="submit" class="btn btn-primary"><i
+                    class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--Webiste Alarm-->
+      <div style="margin-left: 75px;" class="w3-third w3-container w3-margin-bottom">
+        <img src="/static/alarm.jpeg" style="width: 100%; height:200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b style="margin-left: 80px;">Open website at a specific time</b></p>
+          <p>Set specific time open a website</p>
+          <form method="POST" action="/alarm" class="navbar-form navbar-right" role="search">
+            <div style="margin-top: 0px;" class="form-group input-group">
+              <input type="text" name="website_url" style="width:300px;" placeholder="Enter URL of the website">
+              <input type="text" name="set_alarm" style="width:200px;" placeholder="Set the time as H:M:S:">
+              <span class="input-group-btn">
+                <button style="margin-left: 20px; " type="submit" class="btn btn-primary">Submit</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Spell Checker-->
+    <div class="w3-row-padding">
+      <div style="margin-left: 170px;" class="w3-third w3-container w3-margin-bottom">
+        <img src="/static/spell-check.jpeg" style="width: 100%; height:200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b style="margin-left: 100px;">Correct all spellings</b></p>
+          <p>Choose the file you want to check</p>
+          <form method="POST" action="/spellCheck" class="navbar-form navbar-right" role="search">
+            <div style="margin-top: 0px;" class="form-group input-group">
+              <input type="file" name="file_name" style="width:300px;" placeholder="Choose the file">
+              <span class="input-group-btn">
+                <button style="margin-left: 10px; " type="submit" class="btn btn-primary">Submit</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Download all images -->
+      <div style="margin-left: 75px;" class="w3-third w3-container w3-margin-bottom">
+        <img src="/static/downloadAll.jpg" style="width: 100%; height:200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b style="margin-left: 80px;">Download all Images on a page at once</b></p>
+          <p>Enter the website url</p>
+          <form method="POST" action="/imageDownload" class="navbar-form navbar-right" role="search">
+            <div style="margin-top: 0px;" class="form-group input-group">
+              <input type="text" name="url_name" style="width:300px;" placeholder="Enter URL of the website">
+              <span class="input-group-btn">
+                <button style="margin-left: 20px; " type="submit" class="btn btn-primary">Submit</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <!-- End page content -->
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>Task Automator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="../static/assistant.png">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+hr.new5 {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:10px">
+    <br>
+    <h1 style = "text-align: center;"> Your requested news topic <b>{{topic}}</b> </h1>
+    <br>
+    {% for article in news %}
+        <div style = "margin-left: 10%; margin-right: 10%;"class="w3-card-4" >
+            <header class="w3-container w3-blue">
+            <h4>{{article[0]}}</h4>
+            </header>
+            <div class="w3-container">
+            <p>{{article[1]}}</p>
+            <p>For complete article click <a href = "{{article[2]}}">Here</a></p> 
+            </div>
+        </div>
+        <br><br>
+    {% endfor %}
+<!-- End page content -->
+</div>
+
+</body>
+</html>
+
